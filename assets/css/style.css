@@ -13,14 +13,60 @@
 /* General styles */
 body {
     min-height: 100vh;
+    /* For the background image */
     background: url('../images/backgrounddemo.jpg') no-repeat;
-
+    background-size: cover;
+    background-position: center;
     font-family: 'Onest', sans-serif;
 }
 
 /*Header*/
-header {
-    color:green; 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /* Make header transparent */
+    background: transparent;
+    /* To seperate the nav bar & logo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Logo */
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Navbar, only affecting anchor */
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
 }
 
 h1 {

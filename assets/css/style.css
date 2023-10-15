@@ -44,6 +44,16 @@ body {
     font-weight: 700;
 }
 
+/* Navbar checkbox and label to be hid for larger/tablet screens */
+input[type="checkbox"] {
+    display: none;
+}
+label[for="navbar_label"] {
+    display: none;
+}
+/* Navbar checkbox and label to be hid for larger/tablet screens */
+
+
 /* Navbar, only affecting anchor */
 .navbar a {
     position: relative;
@@ -69,8 +79,17 @@ body {
     width: 100%;
 }
 
+/* Navbar, only affecting li, this was needed to fix the issue of the list appearing like a column, we've put it below the other nav elements so it will have hover effect on all devices */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+
+}
+
+/* End of nav bar */
+
 h1 {
-    font-family:'Onest'sans-serif;
+    font-family: 'Onest' sans-serif;
 }
 
 /*Main*/
@@ -78,9 +97,46 @@ main {
     color: blue;
     /* Make main element take the space up so the footer can be pushed down */
     flex: 1 0 auto;
+    /* Trying this below to fix the issue as to why the main is loading on the same line as the nav */
+    padding-top: 80px;
+    /* Trying this above fix the issue as to why the main is loading on the same line as the nav */
 }
 
 /*footer*/
 footer {
     color: red;
+    /* Trying this to fix the issue as to why the main is loading on the same line as the nav */
+    margin-top: 20px;
+    /* This below is to keep the footer at the bottom of the page */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* This above is to keep the footer at the bottom of the page */
 }
+
+
+/* Our media queries */
+
+/* Queries for phone screens */
+
+@media (max-width: 320px) {
+        label[for="navbar_label"],
+        input[type="checkbox"] {
+        display: inline;
+}
+
+.navbar {
+    background-color: red;
+    position: absolute;
+    width: 100%;
+    left:0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px yellow;
+    display: none
+    
+}
+
+
+
+/* Queries for phone screens */

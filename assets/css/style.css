@@ -48,9 +48,11 @@ body {
 input[type="checkbox"] {
     display: none;
 }
-label[for="navbar_label"] {
+
+label[for="nav-toggle_label"] {
     display: none;
 }
+
 /* Navbar checkbox and label to be hid for larger/tablet screens */
 
 
@@ -121,20 +123,22 @@ footer {
 /* Queries for phone screens */
 
 @media (max-width: 320px) {
-        label[for="navbar_label"],
-        input[type="checkbox"] {
-        display: inline;
-}
 
-.navbar {
-    background-color: red;
-    position: absolute;
-    width: 100%;
-    left:0;
-    padding: 0 1rem;
-    box-shadow: 0 2px 2px yellow;
-    display: none
-    
+    label[for="nav-toggle"],
+    input[type="checkbox"] {
+        display: inline;
+    }
+
+    .navbar {
+        background-color: red;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        padding: 0 1rem;
+        box-shadow: 0 2px 2px yellow;
+        display: none
+    }
+
 }
 
 
